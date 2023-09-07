@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 777px;
+    background: linear-gradient(to right bottom,orange,pink,blue);
+    background-repeat: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+#welcome{
+    display: grid;
+    border-radius: 8px;
+    background: linear-gradient(to right bottom,blue,pink,orange);
+    margin: auto;
+    width: 350px;
+    align-items: center;
+    text-align: center;
+    height: 315px;
+    box-shadow: inset 1px -1px 17px 0px cyan;
+}
+#welcome h3{
+    margin-bottom: -30px;
+    font-size: 35px;
+}
+.startBtn{
+    background: rgb(32, 212, 32);
+    color: whitesmoke;
+    border-radius: 8px;
+    width: 110px;
+    height: 42px;
+    border: 0;
+    font-size: larger;
+    margin: -5px auto auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.startBtn:hover{
+    box-shadow: 1px 1px 17px 0 cyan;
+}
+.container {
+    display: none;
+    background-color: rgb(213, 200, 200);
+    border-radius: 12px;
+    padding: 10px;
+    height: 340px;
+    width: 420px;
+}
+#questBox {
+    display: flex;
+    align-items: center;
+    height: 85px;
+}
+.question {
+    width: 85%;
+    margin: 19px 20px;
+    font-size: larger;
+}
+.time {
+    display: grid;
+    padding: 8px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: lightblue;
+    border-radius: 8px;
+    height: 48px;
+    width: 147px;
+    line-height: 14px;
+}
+.timer {
+    margin: 5px auto;
+    width: 22px;
+    height: 17px;
+    text-align: center;
+    align-items: center;
+    border: 2px solid black;
+    background-color: lavender;
+    border-radius: 4px;
+    color: red;
+    display: grid;
+    justify-content: center;
+}
+hr {
+    background: white;
+    margin: 10px 20px;
+}
+.choice{
+    font-size: 20px;
+    background-color: rgb(116, 142, 115);
+    color: indigo;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: left;
+    width: 85%;
+    cursor: pointer;
+}
+.choice:hover {
+    background-color: powderblue;
+    color: red;
+}
+.choice.selected{
+    background-color: rgb(255, 255, 124);
+    color: black;
+}
+.nextBtn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    background: rgb(32, 212, 32);
+    color: whitesmoke;
+    border-radius: 12px;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    margin: 10px 0;
+    font-size: larger;
+    cursor: pointer;
+}
+.nextBtn:hover {
+    font-size: 1.02rem;
+    box-shadow: 1px 1px 10px 1px white;
+}
+.scoreCard{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+}
+.exitBtn{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    background: rgb(232, 10, 10);
+    color: whitesmoke;
+    border-radius: 12px;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    margin: 10px 0;
+    font-size: larger;
+    cursor: pointer;
+}
+.exitBtn:hover{
+    font-size: 1.02rem;
+    box-shadow: 1px 1px 10px 1px white;
+}
+
