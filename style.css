@@ -159,4 +159,32 @@ hr {
     font-size: 1.02rem;
     box-shadow: 1px 1px 10px 1px white;
 }
-
+@media screen and (max-width:450px) {
+    body{
+        height: 636px;
+    }
+    #welcome{
+        width: 240px;
+        height: 240px;
+        font-size: 13px;
+    }  
+    #welcome h3{
+        font-size: 30px;
+    }  
+    .container{
+        width: 235px;
+        height: 313px;
+    }
+    .question{
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .time{
+        width: 60px;
+        font-size: 13px;
+    }
+    .choice{
+        width: 95%;
+        font-size: 15px;
+    }
+}
