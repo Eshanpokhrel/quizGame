@@ -235,10 +235,6 @@ const startQuiz=()=>{
     shuffleQuestion();
 }
 
-const disableBtn = () =>{
-
-}
-
 startBtn.addEventListener('click',()=>{
     timeLeft = 10;
     welcome.style.display = 'none';
@@ -271,3 +267,6 @@ nextBtn.addEventListener('click',()=>{
     checkAnswer();
   }
 });
+exitBtn.addEventListener('click',()=>{
+  window.location.reload="index";
+  })
