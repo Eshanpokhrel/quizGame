@@ -1,7 +1,8 @@
 body {
     display: flex;
     align-items: center;
-    height: 700px;
+    height: 777px;
+    /* background-color: pink; */
     background: linear-gradient(to right bottom,orange,pink,blue);
     background-repeat: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

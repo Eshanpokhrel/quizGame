@@ -120,17 +120,11 @@ const showQuestions = () =>{
             choiceBtn.addEventListener('click',()=>{
               if(choiceBtn.classList.contains('selected')){
                 //if user clicks on a selected button do nothing
-                choiceBtn.classList.toggle('selected');
+                choiceBtn.classList.remove('selected');
               }
-              // else if(choiceBtn.classList.contains('selected')){
-              //   //if user selects another option remove previous selection and add new one
-              // }
-              // else{
-              //   choiceBtn.classList.add('selected');
-              //   // choiceBtn.disabled = true;
-              //   // console.log(choicesBox)
-              //   // choiceBtn.setAttribute('disabled','disabled');
-              //   }
+              else{
+                choiceBtn.classList.add('selected');
+              }
             });
         }
         if(currentQuestionIndex < quiz.length){
@@ -199,7 +193,7 @@ const startTimer = () =>{
         if(timeLeft === 0){
             const confirmUser = confirm('Are you still playing');
             if(confirmUser){
-                timeLeft = 10;
+                timeLeft = 15;
                 score = 0;
                 startQuiz();
             }
@@ -207,6 +201,7 @@ const startTimer = () =>{
                 welcome.style.display = "grid";
                 container.style.display = "none";
                 nextBtn.style.display = 'none';
+                stopTimer();
                 return;
             }
         }
@@ -230,13 +225,13 @@ const shuffleQuestion = ()=>{
 
 const startQuiz=()=>{
     //show questions and options on click of start btn
-    timeLeft = 10;
+    timeLeft = 15;
     time.style.display = 'grid';
     shuffleQuestion();
 }
 
 startBtn.addEventListener('click',()=>{
-    timeLeft = 10;
+    timeLeft = 15;
     welcome.style.display = 'none';
     container.style.display = 'block';
     nextBtn.style.display = 'flex';
@@ -267,6 +262,7 @@ nextBtn.addEventListener('click',()=>{
     checkAnswer();
   }
 });
+
 exitBtn.addEventListener('click',()=>{
-  window.location.reload="index";
-  })
+  window.location="index.html";
+})
