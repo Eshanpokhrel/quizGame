@@ -1,7 +1,7 @@
 body {
     display: flex;
     align-items: center;
-    height: 777px;
+    height: 700px;
     background: linear-gradient(to right bottom,orange,pink,blue);
     background-repeat: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -97,12 +97,14 @@ hr {
     font-size: 20px;
     background-color: rgb(116, 142, 115);
     color: indigo;
-    margin: 10px auto;
+    margin: 12px auto;
     padding: 10px;
+    border: none;
     border-radius: 8px;
     text-align: left;
-    width: 85%;
+    width: 70%;
     cursor: pointer;
+    display: flex;
 }
 .choice:hover {
     background-color: powderblue;
