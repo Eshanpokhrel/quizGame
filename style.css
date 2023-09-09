@@ -2,7 +2,6 @@ body {
     display: flex;
     align-items: center;
     height: 777px;
-    /* background-color: pink; */
     background: linear-gradient(to right bottom,orange,pink,blue);
     background-repeat: cover;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -161,12 +160,14 @@ hr {
 }
 @media screen and (max-width:450px) {
     body{
-        height: 676px;
+        height: 0;
+        background: pink;
     }
     #welcome{
         width: 240px;
         height: 240px;
         font-size: 13px;
+        margin-top: 185px;
     }  
     #welcome h3{
         font-size: 30px;
@@ -174,6 +175,7 @@ hr {
     .container{
         width: 235px;
         height: 313px;
+        margin-top: 160px;
     }
     .question{
         font-size: 13px;
