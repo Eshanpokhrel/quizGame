@@ -191,28 +191,27 @@ const showScore = ()=>{
 
 
 const startTimer = () =>{  
-  //start timer when game starts
-  clearInterval(timerId);     //clears all existing timer
-  const countDown = ()=>{
-    timeLeft--;
-    timer.textContent = timeLeft;
-    if(timeLeft === 0){
-      const confirmUser = confirm('Are you still playing');
-      if(confirmUser){
-        timeLeft = 15;
-        score = 0;
-        startQuiz();
-      }
-      else{
-        welcome.style.display = "grid";
-        container.style.display = "none";
-        nextBtn.style.display = 'none';
-        stopTimer();
-        return;
-      }
+    //start timer when game starts
+    clearInterval(timerId);     //clears all existing timer
+    const countDown = ()=>{
+        timeLeft--;
+        timer.textContent = timeLeft;
+        if(timeLeft === 0){
+            const confirmUser = confirm('Are you still playing');
+            if(confirmUser){
+                timeLeft = 10;
+                score = 0;
+                startQuiz();
+            }
+            else{
+                welcome.style.display = "grid";
+                container.style.display = "none";
+                nextBtn.style.display = 'none';
+                return;
+            }
+        }
     }
-  }
-  timerId = setInterval(countDown,1000);  //every second it will run this function and decrement timeleft by a sec
+    timerId = setInterval(countDown,1000);  //every second it will run this function and decrement timeleft by a sec
 }
 
 const stopTimer =()=>{
@@ -230,10 +229,10 @@ const shuffleQuestion = ()=>{
 }
 
 const startQuiz=()=>{
-  //show questions and options on click of start btn
-  timeLeft = 15;
-  time.style.display = 'grid';
-  shuffleQuestion();
+    //show questions and options on click of start btn
+    timeLeft = 10;
+    time.style.display = 'grid';
+    shuffleQuestion();
 }
 
 const disableBtn = () =>{
@@ -241,12 +240,12 @@ const disableBtn = () =>{
 }
 
 startBtn.addEventListener('click',()=>{
-  timeLeft = 15;
-  welcome.style.display = 'none';
-  container.style.display = 'block';
-  nextBtn.style.display = 'flex';
-  startQuiz();
-  // showQuestions();  
+    timeLeft = 10;
+    welcome.style.display = 'none';
+    container.style.display = 'block';
+    nextBtn.style.display = 'flex';
+    startQuiz();
+    // showQuestions();  
 });
 // showQuestions();  
 
@@ -272,6 +271,3 @@ nextBtn.addEventListener('click',()=>{
     checkAnswer();
   }
 });
-exitBtn.addEventListener('click',()=>{
-    window.location.reload("index");    //Reload the page to reset everything and restart from scratch!
-})
