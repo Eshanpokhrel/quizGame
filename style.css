@@ -161,7 +161,7 @@ hr {
 }
 @media screen and (max-width:450px) {
     body{
-        height: 636px;
+        height: 676px;
     }
     #welcome{
         width: 240px;
