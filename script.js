@@ -14,7 +14,7 @@ const exitBtn = document.querySelector('.exitBtn');
 let currentQuestionIndex=0;
 let score = 0;
 let quizOver = false;
-let timeLeft = 10;
+let timeLeft = 15;
 let timerId = null;
 
 
@@ -143,7 +143,7 @@ const checkAnswer = () =>{
         // alert(`Wrong Answer!`);
         // displayAlert(`Wrong Answer! ${quiz[currentQuestionIndex].answer} is the correct answer`)
     }
-    timeLeft = 10;
+    timeLeft = 15;
     currentQuestionIndex++;     //incrementing index by one each time user clicks on Next button
     if(currentQuestionIndex < quiz.length){
         // console.log("Current Question Index",currentQuestionIndex);
@@ -195,7 +195,7 @@ const startTimer = () =>{
         if(timeLeft === 0){
             const confirmUser = confirm('Are you still playing');
             if(confirmUser){
-                timeLeft = 10;
+                timeLeft = 15;
                 score = 0;
                 startQuiz();
             }
@@ -203,6 +203,7 @@ const startTimer = () =>{
                 welcome.style.display = "grid";
                 container.style.display = "none";
                 nextBtn.style.display = 'none';
+                stopTimer();
                 return;
             }
         }
@@ -226,13 +227,13 @@ const shuffleQuestion = ()=>{
 
 const startQuiz=()=>{
     //show questions and options on click of start btn
-    timeLeft = 10;
+    timeLeft = 15;
     time.style.display = 'grid';
     shuffleQuestion();
 }
 
 startBtn.addEventListener('click',()=>{
-    timeLeft = 10;
+    timeLeft = 15;
     welcome.style.display = 'none';
     container.style.display = 'block';
     nextBtn.style.display = 'flex';
